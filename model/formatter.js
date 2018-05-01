@@ -16,7 +16,6 @@ sap.ui.define([], function() {
 			return parseFloat(sValue).toFixed(2);
 		},
 
-
 		/**
 		 * Defines a value state based on the stock level
 		 * @public

@@ -80,12 +80,10 @@
 						press="onPress"
 						type="Navigation">
 						<cells>on">
-
 						<cells>
 							<ObjectIdentifier
 								title="{ProductName}"/>
-							<Text text = "{Supplier/CompanyName}"/>
-							<ObjectNumber number="{UnitsInStock}"/>
+							<Text text = "{Supplier/CompanyName}"/>														
 							 <ObjectNumber
                                        unit="EUR"
                                        number="{ path: 'UnitPrice',
