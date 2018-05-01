@@ -194,5 +194,19 @@
         "uri": "/destinations/northwind/V2/Northwind/Northwind.svc/Products(15)/Supplier"
       }
     }
+  },
+  {
+    "ProductID": 16,
+    "ProductName": "Prinzen Rolle",
+    "UnitsInStock": 90,
+    "UnitsOnOrder": 20,
+    "UnitPrice": 55,
+    "SupplierID": 2,
+    "Discontinued": true,
+    "Supplier": {
+      "__deferred": {
+        "uri": "/destinations/northwind/V2/Northwind/Northwind.svc/Products(16)/Supplier"
+      }
+    }
   }
 ]
