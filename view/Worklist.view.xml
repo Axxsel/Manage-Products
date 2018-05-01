@@ -24,15 +24,14 @@
 						path: 'ProductName',
 						descending: false
 					},
-                    parameters: {
-                       'expand': 'Supplier'
-                    }
-
+					parameters: {
+						'expand': 'Supplier'
+					}
 				}">
 				<headerToolbar>
 					<Toolbar>
 						<Title
-							id="tableHeader"
+							id="talebHeader"
 							text="{worklistView>/worklistTableTitle}"/>
 						<ToolbarSpacer/>
 						<SearchField
@@ -49,44 +48,56 @@
 							text="{i18n>TableNameColumnTitle}"/>
 					</Column>
 					
+					
 					<Column
 						id="supplierNameColumn"
 						demandPopin="false"
 						minScreenWidth="Tablet">
 						<Text text="{i18n>TableSupplierColumnTitle}"/>
 					</Column>
-
-    				<Column id="unitsInStockColumn"
+					<Column
+						id="unitPriceColumn"
+						hAlign="End"
+						demandPopin="true"
+						minScreenWidth="Tablet">
+						<Text text="{i18n>TablePriceColumnTitle}"/>
+					</Column>
+					<Column id="unitsOnOrderColumn"
+						demandPopin="true"
+						minScreenWidth="Tablet"
+						hAlign="End">
+						<Text text="{i18n>TableUnitsOrderedColumnTitle}"/>
+					</Column>
+					<Column id="unitsInStockColumn"
 						hAlign="End">
 						<Text text="{i18n>TableUnitsInStockColumnTitle}"/>
 					</Column>
-
 				</columns>
 				<items>
 					<ColumnListItem
 						press="onPress"
 						type="Navigation">
-						<cells>on">
 						<cells>
 							<ObjectIdentifier
 								title="{ProductName}"/>
-							<Text text = "{Supplier/CompanyName}"/>														
-							 <ObjectNumber
-                                       unit="EUR"
-                                       number="{ path: 'UnitPrice',
-                                                 formatter: '.formatter.numberUnit'
-                                                }"/>
-                            <ObjectNumber
-                                    number="{UnitsOnOrder}"
-                                    unit="PC"/>
-				   		   <ObjectNumber
-                                   number="{UnitsInStock}"
-                                   unit="PC" 
-                                         path: 'UnitsInStock',
-                                         formatter: '.formatter.quantityState'
-                                        }"/>
+							<Text text = "{Supplier/CompanyName}"/>							
+							<ObjectNumber
+								unit="EUR"
+								number="{
+									path: 'UnitPrice',
+									formatter: '.formatter.numberUnit'
+								}"/>
+							<ObjectNumber
+								number="{UnitsOnOrder}"
+								unit="PC"/>
+							<ObjectNumber
+								number="{UnitsInStock}"
+								unit="PC"
+								state="{
+									path: 'UnitsInStock',
+									formatter: '.formatter.quantityState'
+								}"/>
 						</cells>
-
 					</ColumnListItem>
 				</items>
 			</Table>
