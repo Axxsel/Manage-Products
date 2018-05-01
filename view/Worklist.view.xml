@@ -42,37 +42,24 @@
 							width="auto"/>
 					</Toolbar>
 				</headerToolbar>
-				<columns>UnitsInStock
+				<columns>
 					<Column id="nameColumn">
 						<Text
 							id="nameColumnTitle"
 							text="{i18n>TableNameColumnTitle}"/>
 					</Column>
-					<Column id="unitNumberColumn">
-						<Text
-							id="unitNumberColumnTitle"
-							text="{i18n>TableUnitNumberColumnTitle}"/>
-					</Column>
-
+					
 					<Column
-						id="unitPriceColumn"
-						hAlign="End"
-						demandPopin="true"
+						id="supplierNameColumn"
+						demandPopin="false"
 						minScreenWidth="Tablet">
-						<Text text="{i18n>TablePriceColumnTitle}"/>
+						<Text text="{i18n>TableSupplierColumnTitle}"/>
 					</Column>
 
-                    <Column id="unitsOnOrderColumn"
-                       demandPopin="true"
-                       minScreenWidth="Tablet"
-                       hAlign="End">
-                      <Text text="{i18n>TableUnitsOrderedColumnTitle}"/>
-                    </Column>
-
-                    <Column id="unitsInStockColumn"
-                       hAlign="End">
-                        <Text text="{i18n>TableUnitsInStockColumnTitle}"/>
-                    </Column>
+    				<Column id="unitsInStockColumn"
+						hAlign="End">
+						<Text text="{i18n>TableUnitsInStockColumnTitle}"/>
+					</Column>
 
 				</columns>
 				<items>
